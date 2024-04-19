@@ -35,3 +35,5 @@ Click "Jupyter Lab" then click "Terminal" -
 <img width="617" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/4e5743df-9173-494e-b107-ad8d35768cd9">
 
 A screen will open that is your command prompt. Copy and paste the lines from my script one by one (don't copy and paste the lines with the # at the beginning).
+
+REMEMBER TO USE YOUR OWN WALLET ADDRESS WHEN RUNNING THE MINER AT THE END OF THE SCRIPT!
