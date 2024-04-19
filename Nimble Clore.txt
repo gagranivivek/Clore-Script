@@ -49,3 +49,5 @@ pip install 'fsspec==2023.10.0'
 source ./nimenv_localminers/bin/activate
 
 tmux new-session -d -s Nimble 'make run addr=nimble_address'
+
+# To access your instance, simply type "tmux attach"
