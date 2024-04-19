@@ -7,12 +7,15 @@ Once you have signed up, the simplest way to look for an instance is to click on
 
 You will then get a list of instances like this - 
 <img width="769" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/11c9e33e-47c0-4fb8-b755-d06ae174a42d">
+
 Work out the cost per hour using the current Clore price x amount of Clore per day rental fee / 24. Currently a 4090 is around $0.122-$0.13 per hour.
 
 Click on "Rent" and then you will be taken to this screen -
 <img width="1268" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/dadf223b-8d95-4acc-a228-e232d152add7">
+
 Select the "PyTorch" image. then scroll down and click "Create" - 
 <img width="343" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/de36981e-4266-4246-af03-fbdcf3e17d36">
+
 You will then see your machine you rented under "My Orders". It will display a status of "Deploying". This will change to "Deployed" once it is ready to connect to. This can take some time, so you will need to be patient.
 
 Once the machine status says "Deployed" click here - 
