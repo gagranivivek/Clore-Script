@@ -4,6 +4,7 @@ First, I would appreciate it if you used my Clore referral code, it helps fund m
 
 Once you have signed up, the simplest way to look for an instance is to click on "Marketplace" and set the filters to the following - 
 <img width="164" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/351b27b3-12cd-49de-86dc-923360bf4bd5">
+
 You will then get a list of instances like this - 
 <img width="769" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/11c9e33e-47c0-4fb8-b755-d06ae174a42d">
 Work out the cost per hour using the current Clore price x amount of Clore per day rental fee / 24. Currently a 4090 is around $0.122-$0.13 per hour.
