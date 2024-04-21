@@ -24,6 +24,8 @@ cd nimble-miner-public
 
 sudo rm requirements.txt
 
+# Copy this entire echo command all the way to the end of requirements.txt
+
 echo '
 requests==2.31.0
 torch==2.2.1
