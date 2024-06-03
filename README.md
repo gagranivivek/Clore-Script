@@ -26,7 +26,8 @@ Remove the existing comments from the box that opens up so it is blank like this
 
 Then paste this entire script into that box (PLEASE PLEASE PLEASE REMEMBER TO PUT YOUR ADDRESS IN THE 2 PLACES INDICATED) -
 
-```#!/bin/bash
+```
+#!/bin/bash
 
 # Update system and install Go
 
