@@ -16,7 +16,75 @@ Click on "Rent" and then you will be taken to this screen -
 
 <img width="1269" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/95cfed5d-fc16-419a-b8a4-435fe8b51fdb">
 
-Select the "Jupyter Lab + VS Code" image. then scroll down and click "Create" - 
+Select the "Jupyter Lab + VS Code" image. then scroll down and select "Enable Startup Script" - 
+
+<img width="878" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/77bf69ca-2c58-4f9d-aa05-d846b141acfd">
+
+Remove the existing comments from the box that opens up so it is blank like this - 
+
+<img width="1249" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/f3398998-ab38-4f5f-9056-538281ff5746">
+
+Then paste this entire script into that box. 
+
+```#!/bin/bash
+
+# Update system and install Go
+
+sudo apt update
+sudo apt install tmux -y && apt install build-essential -y && apt install make -y
+wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
+
+sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
+
+export PATH=$PATH:/usr/local/go/bin
+
+# Install python3 environment
+
+sudo apt install python3-venv -y
+
+# Clone into miner and compile
+
+mkdir $HOME/nimble && cd $HOME/nimble
+git clone https://github.com/nimble-technology/nimble-miner-public.git
+cd nimble-miner-public
+
+# Edit requirements.txt to run lower version of numpy
+
+rm requirements.txt
+
+# Copy this entire echo command
+
+echo '
+requests==2.31.0
+torch==2.2.1
+accelerate==0.27.0
+transformers==4.38.1
+datasets==2.17.1
+numpy==1.24
+gitpython==3.1.42' > requirements.txt
+
+# Update git files and install miner
+
+git pull
+make install
+
+# Change fsspec version
+
+pip uninstall fsspec -y
+
+pip install 'fsspec==2023.10.0'
+pip install prettytable
+
+# Activate the miner
+
+source ./nimenv_localminers/bin/activate
+
+tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
+
+cat << EOF > /home/clore/onstart.sh
+#!/bin/bash
+sudo bash -c "cd /root/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'"
+EOF```
 
 <img width="343" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/de36981e-4266-4246-af03-fbdcf3e17d36">
 
