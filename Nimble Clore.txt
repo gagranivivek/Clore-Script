@@ -3,11 +3,11 @@
 # Update system and install Go
 
 sudo apt update
-sudo apt install tmux -y && sudo apt install build-essential -y && sudo apt install make -y
+sudo apt install tmux -y && apt install build-essential -y && apt install make -y
 wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
-sudo su
+
 sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
-exit
+
 export PATH=$PATH:/usr/local/go/bin
 
 # Install python3 environment
@@ -22,9 +22,9 @@ cd nimble-miner-public
 
 # Edit requirements.txt to run lower version of numpy
 
-sudo rm requirements.txt
+rm requirements.txt
 
-# Copy this entire echo command all the way to the end of requirements.txt
+# Copy this entire echo command
 
 echo '
 requests==2.31.0
@@ -45,11 +45,17 @@ make install
 pip uninstall fsspec -y
 
 pip install 'fsspec==2023.10.0'
+pip install prettytable
 
 # Activate the miner
 
 source ./nimenv_localminers/bin/activate
 
-tmux new-session -d -s Nimble 'make run addr=nimble_address'
+tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
 
-# To access your instance, simply type "tmux attach"
+# Write command to onstart.sh to restart the miner if the instance restarts
+
+cat << EOF > /home/clore/onstart.sh
+#!/bin/bash
+sudo bash -c "cd /root/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'"
+EOF
