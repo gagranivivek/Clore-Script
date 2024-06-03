@@ -107,6 +107,8 @@ Click "Jupyter Lab" then click "Terminal" -
 
 A screen will open that is your command prompt. Simply type -
 
-```sudo tmux attach``` to see your miner running
+```sudo tmux attach``` to see your miner running.
+
+If you do not see the miner, "make install" is probably still running, especially if the instance internet speed is slower. Type ```ps aux``` to check in the process list if "make install" is still running. You should see a tmux process when it is complete and running the Nimble miner.
 
 REMEMBER TO USE YOUR OWN WALLET ADDRESS WHEN YOU PASTE IN THE SCRIPT!!!
