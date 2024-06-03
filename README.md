@@ -32,10 +32,13 @@ Then paste this entire script into that box (PLEASE PLEASE PLEASE REMEMBER TO PU
 # Update system and install Go
 
 sudo apt update
-sudo apt install tmux -y && apt install build-essential -y && apt install make -y
+sudo apt install tmux -y
+sudo apt install build-essential -y
+sudo apt install make -y
 wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
 
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -45,7 +48,7 @@ sudo apt install python3-venv -y
 
 # Clone into miner and compile
 
-mkdir $HOME/nimble && cd $HOME/nimble
+mkdir -p /home/clore/nimble && cd /home/clore/nimble
 git clone https://github.com/nimble-technology/nimble-miner-public.git
 cd nimble-miner-public
 
@@ -67,25 +70,30 @@ gitpython==3.1.42' > requirements.txt
 # Update git files and install miner
 
 git pull
-make install
+sudo make install
 
 # Change fsspec version
 
-pip uninstall fsspec -y
+sudo pip uninstall fsspec -y
+sudo pip install 'fsspec==2023.10.0'
+sudo pip install prettytable
 
-pip install 'fsspec==2023.10.0'
-pip install prettytable
+# Install requirements globally
+sudo pip install -r requirements.txt
 
 # Activate the miner
 
 source ./nimenv_localminers/bin/activate
 
-tmux new-session -d -s Nimble 'make run addr=YOUR_NIMBLE_ADDRESS'
+tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
 
 cat << EOF > /home/clore/onstart.sh
 #!/bin/bash
-sudo bash -c "cd /root/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=YOUR_NIMBLE_ADDRESS'"
+cd /home/clore/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
 EOF
+
+# Make sure the onstart.sh script is executable
+chmod +x /home/clore/onstart.sh
 ```
 
 Then click "Create" -
