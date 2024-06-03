@@ -14,9 +14,9 @@ Work out the cost per hour using the current Clore price x amount of Clore per d
 
 Click on "Rent" and then you will be taken to this screen -
 
-<img width="1268" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/dadf223b-8d95-4acc-a228-e232d152add7">
+<img width="1269" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/95cfed5d-fc16-419a-b8a4-435fe8b51fdb">
 
-Select the "PyTorch" image. then scroll down and click "Create" - 
+Select the "Jupyter Lab + VS Code" image. then scroll down and click "Create" - 
 
 <img width="343" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/de36981e-4266-4246-af03-fbdcf3e17d36">
 
