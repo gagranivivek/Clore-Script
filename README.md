@@ -85,11 +85,11 @@ sudo pip install -r requirements.txt
 
 source ./nimenv_localminers/bin/activate
 
-tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
+sudo tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
 
 cat << EOF > /home/clore/onstart.sh
 #!/bin/bash
-cd /home/clore/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
+cd /home/clore/nimble/nimble-miner-public && sudo tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
 EOF
 
 # Make sure the onstart.sh script is executable
