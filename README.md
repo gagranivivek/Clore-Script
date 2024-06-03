@@ -24,7 +24,7 @@ Remove the existing comments from the box that opens up so it is blank like this
 
 <img width="1249" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/f3398998-ab38-4f5f-9056-538281ff5746">
 
-Then paste this entire script into that box. 
+Then paste this entire script into that box (PLEASE PLEASE PLEASE REMEMBER TO PUT YOUR ADDRESS IN THE 2 PLACES INDICATED) -
 
 ```#!/bin/bash
 
@@ -79,13 +79,15 @@ pip install prettytable
 
 source ./nimenv_localminers/bin/activate
 
-tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'
+tmux new-session -d -s Nimble 'make run addr=YOUR_NIMBLE_ADDRESS'
 
 cat << EOF > /home/clore/onstart.sh
 #!/bin/bash
-sudo bash -c "cd /root/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=nimble1k2e5lwdgt5tklwtzc4anykfwlflglsxly9676j'"
+sudo bash -c "cd /root/nimble/nimble-miner-public && tmux new-session -d -s Nimble 'make run addr=YOUR_NIMBLE_ADDRESS'"
 EOF
 ```
+
+Then click "Create" -
 
 <img width="343" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/de36981e-4266-4246-af03-fbdcf3e17d36">
 
@@ -103,6 +105,8 @@ Click "Jupyter Lab" then click "Terminal" -
 
 <img width="617" alt="image" src="https://github.com/neo250376/Clore-Script/assets/36828226/4e5743df-9173-494e-b107-ad8d35768cd9">
 
-A screen will open that is your command prompt. Copy and paste the lines from my script one by one (don't copy and paste the lines with the # at the beginning).
+A screen will open that is your command prompt. Simply type -
 
-REMEMBER TO USE YOUR OWN WALLET ADDRESS WHEN RUNNING THE MINER AT THE END OF THE SCRIPT!
+```sudo tmux attach``` to see your miner running
+
+REMEMBER TO USE YOUR OWN WALLET ADDRESS WHEN YOU PASTE IN THE SCRIPT!!!
