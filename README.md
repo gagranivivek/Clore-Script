@@ -113,3 +113,11 @@ A screen will open that is your command prompt. Simply type -
 If you do not see the miner, "make install" is probably still running, especially if the instance internet speed is slower. Type ```ps aux``` to check in the process list if "make install" is still running. You should see a tmux process when it is complete and running the Nimble miner.
 
 REMEMBER TO USE YOUR OWN WALLET ADDRESS WHEN YOU PASTE IN THE SCRIPT!!!
+
+Please consider tipping me for my work and making your Nimble mining easier :)
+
+Clore - AZTjV6rooGeJ66wwboaJ7XxTmU3W9UggF6
+LTC - ltc1qmz4htzmqyxpgkjakukckxac89zqlzfyxzyf03v
+USDT (Tron) - TU7JREp1CRjX1543nWL2skZUVwJceuKzLk
+SEI - sei1es82kch84n34hfvp03c256a7c6ettursmyfjmz Memo - 5eCqyLfLFqxyEG
+Matic - 0x8ef952a73a3717b275ec9278b91b2720acdd40f3
