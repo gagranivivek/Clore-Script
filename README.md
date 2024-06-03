@@ -1,4 +1,4 @@
-Ok, this is a quick guide on how to setup Clore and use my script to install the Nimble miner.
+Ok, this is a quick guide on how to setup Clore and Nimble with a function to auto-restart the Nimble mining process if the instance restarts for any reason.
 
 First, I would appreciate it if you used my Clore referral code, it helps fund my machines I use for testing my scripts - https://clore.ai?ref_id=jzj1ckbf
 
