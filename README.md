@@ -70,7 +70,7 @@ gitpython==3.1.42' > requirements.txt
 # Update git files and install miner
 
 git pull
-sudo make install
+make install
 
 # Change fsspec version
 
