@@ -81,15 +81,17 @@ sudo pip install prettytable
 # Install requirements globally
 sudo pip install -r requirements.txt
 
+export TOKENIZERS_PARALLELISM=false
+
 # Activate the miner
 
 source ./nimenv_localminers/bin/activate
 
-sudo tmux new-session -d -s Nimble 'make run addr=YOUR_NIMBLE_ADDRESS'
+sudo tmux new-session -d -s Nimble 'make run addr=nimble1fcfelj2unt5qa2zxluneah8l3h7e0fn72vqmdh'
 
 cat << EOF > /home/clore/onstart.sh
 #!/bin/bash
-cd /home/clore/nimble/nimble-miner-public && sudo tmux new-session -d -s Nimble 'make run addr=YOUR_NIMBLE_ADDRESS'
+cd /home/clore/nimble/nimble-miner-public && sudo tmux new-session -d -s Nimble 'make run addr=nimble1fcfelj2unt5qa2zxluneah8l3h7e0fn72vqmdh'
 EOF
 
 # Make sure the onstart.sh script is executable
